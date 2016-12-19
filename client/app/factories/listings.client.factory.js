@@ -23,5 +23,11 @@ angular.module('listings').factory('Listings', ['$http',
     };
 
     return methods;
+
+    /*
+      In the mean.js framework, this same factory shows up in the 'services' folder, and uses $ngResource. 
+      $ngResource is an abstracted service that interfaces with RESTful APIs. Learn more at the following link: 
+        http://jacopretorius.net/2013/04/using-ngresource-with-angularjs.html
+     */
   }
 ]);

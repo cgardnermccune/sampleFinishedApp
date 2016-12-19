@@ -8,6 +8,7 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
       Listings.getAll().then(function(response) {
         $scope.loading = false; //remove loader
         $scope.listings = response.data;
+        debugger;
       }, function(error) {
         $scope.loading = false;
         $scope.error = 'Unable to retrieve listings!\n' + error;
@@ -31,11 +32,12 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
        */
 
       var id = $stateParams.listingId;
-
+      debugger;
       Listings.read(id)
               .then(function(response) {
                 $scope.listing = response.data;
                 $scope.loading = false;
+                debugger;
               }, function(error) {  
                 $scope.error = 'Unable to retrieve listing with id "' + id + '"\n' + error;
                 $scope.loading = false;
